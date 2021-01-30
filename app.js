@@ -1,3 +1,13 @@
+function removePreviousContent() {
+    if(document.getElementById('dog-image')) {
+        document.getElementById('dog-image').remove();
+    }
+    if(document.getElementById('dog-video')) {
+        document.getElementById('dog-vid').style.display='none';
+        document.getElementById('dog-video').remove();
+    }
+}
+
 async function getUrl() {
     try {
         const fetched = await fetch("https://random.dog/woof.json?ref=apilist.fun");
@@ -7,13 +17,7 @@ async function getUrl() {
 
         if ( jsonRes.url.includes(".jpg") || jsonRes.url.includes(".png") || jsonRes.url.includes(".jpeg") || jsonRes.url.includes(".gif") ) {
             
-            if(document.getElementById('dog-image')) {
-                document.getElementById('dog-image').remove();
-            }
-            if(document.getElementById('dog-video')) {
-                document.getElementById('dog-vid').remove();
-            }
-
+            removePreviousContent()
             let img = document.createElement('img');
             img.src = jsonRes.url;
             img.id = 'dog-image'
@@ -23,13 +27,7 @@ async function getUrl() {
         }
         if ( jsonRes.url.includes(".mp4") ) {
 
-            if(document.getElementById('dog-image')) {
-                document.getElementById('dog-image').remove();
-            }
-
-            if(document.getElementById('dog-video')) {
-                document.getElementById('dog-video').remove();
-            }
+            removePreviousContent()
 
             let videoElem = document.getElementById('dog-vid')
             
