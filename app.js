@@ -28,7 +28,7 @@ async function getUrl() {
             }
 
             if(document.getElementById('dog-video')) {
-                document.getElementById('dog-vid').remove();
+                document.getElementById('dog-video').remove();
             }
 
             let videoElem = document.getElementById('dog-vid')
