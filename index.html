@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Random Dog Pictures</title>
+</head>
+<body>
+    <div class="content">
+        
+        <button class="button"id="link"  onclick="getUrl()" return false;>Dog Pictures for Bianka</button>
+        
+        <div class="copy-section">
+            <input type="text" id="dog-pic-url" readonly>
+            <button class="button"id="copy-url-link"  onclick="copyUrl()" return false;>Copy Url</button>
+            
+        </div>
+        <div id="dog-img"></div>
+        <div>
+            <video id="dog-vid" controls autoplay></video>
+        </div>
+        
+    </div>
+    
+    <script src="./app.js" defer></script>
+</body>
+</html>

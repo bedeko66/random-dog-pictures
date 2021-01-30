@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    background-color: purple;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#dog-image {
+    border-radius: 50px;
+}
+
+video {
+    display: none;
+}
+
+.copy-section {
+    display: flex;
+}
